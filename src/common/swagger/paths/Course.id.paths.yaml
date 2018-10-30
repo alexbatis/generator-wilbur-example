@@ -1,0 +1,56 @@
+get:
+  tags:
+    - Course
+  summary: Retrieves a single course by id.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The id of the Course to retrieve.
+      type: string 
+  responses:
+    200:
+      description: Return the course with the specified id
+    404:
+      description: Course not found
+    500:
+      description: Internal Server Error
+put:
+  tags:
+    - Course
+  summary: Updates course.
+  consumes:
+    - application/json
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The id of the Course to update.
+      type: string 
+    - in: body
+      name: course
+      description: The course to update.
+      schema:
+        $ref: "#/definitions/Course"
+  responses:
+    200:
+      description: OK
+    500:
+      description: Internal Server Error
+delete:
+  tags:
+    - Course
+  summary: Deletes a single course by id.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The id of the Course to delete.
+      type: string 
+  responses:
+    204:
+      description: No Content
+    404:
+      description: Course not found
+    500:
+      description: Internal Server Error

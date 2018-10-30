@@ -1,0 +1,32 @@
+get:
+  tags:
+    - Course
+  summary: Retrieves all courses.
+  responses:
+    200:
+      description: Success
+    404:
+      description: Notfound
+    400:
+      description: Bad Request
+    500:
+      description: Internal Server Error
+post:
+  tags:
+    - Course
+  summary: Creates a new course.
+  consumes:
+    - application/json
+  parameters:
+    - in: body
+      name: course
+      description: The course to create.
+      schema:
+        $ref: "#/definitions/Course"
+  responses:
+    200:
+      description: OK
+    201:
+      description: CREATED
+    500:
+      description: Internal Server Error

@@ -1,0 +1,56 @@
+get:
+  tags:
+    - Professor
+  summary: Retrieves a single professor by id.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The id of the Professor to retrieve.
+      type: string 
+  responses:
+    200:
+      description: Return the professor with the specified id
+    404:
+      description: Professor not found
+    500:
+      description: Internal Server Error
+put:
+  tags:
+    - Professor
+  summary: Updates professor.
+  consumes:
+    - application/json
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The id of the Professor to update.
+      type: string 
+    - in: body
+      name: professor
+      description: The professor to update.
+      schema:
+        $ref: "#/definitions/Professor"
+  responses:
+    200:
+      description: OK
+    500:
+      description: Internal Server Error
+delete:
+  tags:
+    - Professor
+  summary: Deletes a single professor by id.
+  parameters:
+    - name: id
+      in: path
+      required: true
+      description: The id of the Professor to delete.
+      type: string 
+  responses:
+    204:
+      description: No Content
+    404:
+      description: Professor not found
+    500:
+      description: Internal Server Error

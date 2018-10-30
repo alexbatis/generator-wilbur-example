@@ -1,0 +1,5 @@
+.nyc_output
+build
+coverage
+mochawesome-report
+node_modules

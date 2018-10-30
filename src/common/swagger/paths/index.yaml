@@ -1,0 +1,9 @@
+# paths
+/professors:
+  $ref: ./Professor.paths.yaml
+/professors/{id}:
+  $ref: ./Professor.id.paths.yaml
+/courses:
+  $ref: ./Course.paths.yaml
+/courses/{id}:
+  $ref: ./Course.id.paths.yaml

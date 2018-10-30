@@ -1,0 +1,15 @@
+type: object
+required:
+
+ - firstName
+ - lastName
+
+properties:
+    professorID:
+        type: string
+    firstName:
+        type: string
+    lastName:
+        type: string
+    coursesTaught:
+        type: number

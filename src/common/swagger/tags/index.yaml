@@ -1,0 +1,5 @@
+# tags
+Professor:
+  $ref: ./Professor.tag.yaml
+Course:
+  $ref: ./Course.tag.yaml

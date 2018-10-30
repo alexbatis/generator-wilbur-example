@@ -1,0 +1,12 @@
+type: object
+required:
+ - name
+ - subject
+ - description
+properties:
+    name:
+        type: string
+    subject:
+        type: string
+    description:
+        type: string

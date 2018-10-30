@@ -1,0 +1,5 @@
+# definitions
+Professor:
+  $ref: ./Professor.definition.yaml
+Course:
+  $ref: ./Course.definition.yaml

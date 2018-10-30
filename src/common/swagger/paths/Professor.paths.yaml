@@ -1,0 +1,32 @@
+get:
+  tags:
+    - Professor
+  summary: Retrieves all professors.
+  responses:
+    200:
+      description: Success
+    404:
+      description: Notfound
+    400:
+      description: Bad Request
+    500:
+      description: Internal Server Error
+post:
+  tags:
+    - Professor
+  summary: Creates a new professor.
+  consumes:
+    - application/json
+  parameters:
+    - in: body
+      name: professor
+      description: The professor to create.
+      schema:
+        $ref: "#/definitions/Professor"
+  responses:
+    200:
+      description: OK
+    201:
+      description: CREATED
+    500:
+      description: Internal Server Error
