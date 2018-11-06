@@ -3,3 +3,4 @@ build
 coverage
 mochawesome-report
 node_modules
+.DS_Store
